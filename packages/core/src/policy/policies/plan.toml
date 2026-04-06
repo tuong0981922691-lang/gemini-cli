@@ -105,11 +105,19 @@ toolName = [
   "read_file",
   "google_web_search",
   "activate_skill",
-  "codebase_investigator",
-  "cli_help",
   "get_internal_docs",
   "complete_task"
 ]
+decision = "allow"
+priority = 70
+modes = ["plan"]
+
+# Allow specific subagents in Plan mode.
+# We use argsPattern to match the agent_name argument for invoke_agent.
+[[rule]]
+name = "Allow specific subagents in Plan mode"
+toolName = "invoke_agent"
+argsPattern = "\"agent_name\":\\s*\"(codebase_investigator|cli_help)\""
 decision = "allow"
 priority = 70
 modes = ["plan"]
