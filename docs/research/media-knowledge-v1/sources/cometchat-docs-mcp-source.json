@@ -16,8 +16,15 @@
     "commit_author_date": null,
     "commit_committer_date": null,
     "release": null,
-    "accessed_at": "2026-09-20T21:00:16Z",
+    "accessed_at": "2026-09-20T22:01:53Z",
     "collection_status": "blocked-network-http-403",
+    "identifiers": [
+      {
+        "value": "io.github.cometchat/docs-mcp",
+        "kind": "unclassified-user-supplied-identifier",
+        "verification": "unverified"
+      }
+    ],
     "snapshot": {
       "present": false,
       "path": null,
@@ -77,10 +84,19 @@
       "claim": "The requested candidate URL is GitHub cometchat/docs-mcp.",
       "observed_at": "2026-09-20T00:00:00Z",
       "confidence": "low"
+    },
+    {
+      "evidence_id": "COMETCHAT-IDENTIFIER-LEAD-20260920",
+      "kind": "user-provided-lead",
+      "locator": "request:io.github.cometchat/docs-mcp",
+      "claim": "The user supplied the exact string io.github.cometchat/docs-mcp; its namespace type and relationship to the GitHub candidate are not verified.",
+      "observed_at": "2026-09-20T22:01:53Z",
+      "confidence": "low"
     }
   ],
   "notes": [
     "This is a failed-acquisition record, not a source manifest or repository snapshot.",
-    "Do not infer canonical ownership, branch, commit, dates, license, capabilities, or safety from the URL or repository name."
+    "Do not infer canonical ownership, branch, commit, dates, license, capabilities, or safety from the URL or repository name.",
+    "The supplied io.github.cometchat/docs-mcp string may be a package coordinate, reversed-domain identifier, or malformed URL; classification requires authoritative metadata."
   ]
 }

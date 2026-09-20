@@ -34,10 +34,13 @@ length, locator and rights review.
 The complete failed-acquisition record is stored at
 `../sources/cometchat-docs-mcp-source.json`. It is not a snapshot manifest.
 Default branch, full SHA, commit date, release, license, languages,
-capabilities, maintenance, security policy and dependencies remain unknown.
-Required next input is a trusted Git bundle/mirror with refs and history, or
-read-only access to the canonical GitHub repository/API. Static review must
-precede any execution.
+capabilities, maintenance, security policy and dependencies remain unknown. The
+additional string `io.github.cometchat/docs-mcp` is retained verbatim as an
+unclassified user-supplied identifier; it is not treated as a URL, package
+coordinate or proof of ownership without authoritative metadata. Required next
+input is a trusted Git bundle/mirror with refs and history, or read-only access
+to the canonical GitHub repository/API. Static review must precede any
+execution.
 
 ## Promotion policy
 

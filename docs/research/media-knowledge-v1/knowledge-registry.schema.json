@@ -79,6 +79,22 @@
         "release": { "$ref": "#/$defs/nullableString" },
         "accessed_at": { "$ref": "#/$defs/timestamp" },
         "collection_status": { "type": "string" },
+        "identifiers": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["value", "kind", "verification"],
+            "properties": {
+              "value": { "type": "string", "minLength": 1 },
+              "kind": { "type": "string", "minLength": 1 },
+              "verification": {
+                "enum": ["verified", "unverified", "rejected"]
+              }
+            }
+          }
+        },
         "snapshot": {
           "type": "object",
           "additionalProperties": false,
