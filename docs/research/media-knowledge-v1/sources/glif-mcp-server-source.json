@@ -1,0 +1,86 @@
+{
+  "$schema": "../knowledge-registry.schema.json",
+  "schema_version": "1.0.0",
+  "knowledge_id": "agent.mcp.glifxyz.glif-mcp-server@unresolved-2026-09-20",
+  "technology_name": "glif-mcp-server",
+  "technology_domain": ["agent", "mcp", "plugin-integration"],
+  "problem_statement": "Unknown until the official repository README and manifests are available for static inspection.",
+  "architecture_role": "Candidate MCP integration; not approved for architecture use.",
+  "source": {
+    "official_url": "https://github.com/glifxyz/glif-mcp-server",
+    "repository_owner": "glifxyz",
+    "source_class": "official-repository-candidate",
+    "ownership_verification": "unverified-user-provided",
+    "default_branch": null,
+    "commit_sha": null,
+    "commit_author_date": null,
+    "commit_committer_date": null,
+    "release": null,
+    "accessed_at": "2026-09-20T21:00:16Z",
+    "collection_status": "blocked-network-http-403",
+    "snapshot": {
+      "present": false,
+      "path": null,
+      "history": "unavailable",
+      "content_sha256": null,
+      "read_only": null
+    }
+  },
+  "implementation": {
+    "languages": [],
+    "supported_platforms": [],
+    "hardware_requirements": "unknown",
+    "maintenance_status": "unknown"
+  },
+  "licensing": {
+    "source_code": "unknown",
+    "model_weights": "not-assessed",
+    "training_data": "not-assessed",
+    "plugins": "unknown",
+    "direct_dependencies": "unknown",
+    "transitive_dependencies": "unknown",
+    "attribution_obligations": "unknown",
+    "patent_risk": "not-assessed"
+  },
+  "assurance": {
+    "security_risks": [
+      "Repository content and capability boundaries have not been inspected.",
+      "Dependency and credential-handling behavior are unknown."
+    ],
+    "test_evidence": [],
+    "execution_status": "not-executed-policy-compliant",
+    "scores": {
+      "accuracy": null,
+      "verifiability": 0,
+      "completeness": 0,
+      "freshness": null,
+      "applicability": null,
+      "source_reliability": 1
+    },
+    "confidence": "low",
+    "final_label": "CAN_XAC_MINH",
+    "revalidation_date": "2026-10-20"
+  },
+  "evidence": [
+    {
+      "evidence_id": "glif-access-attempt-2026-09-20",
+      "kind": "collection-log",
+      "locator": "local-session: git clone, GitHub API, raw content",
+      "claim": "Outbound attempts were rejected by the environment proxy with HTTP 403; no repository content was acquired.",
+      "observed_at": "2026-09-20T21:00:16Z",
+      "confidence": "high"
+    },
+    {
+      "evidence_id": "glif-user-supplied-identity-2026-09-20",
+      "kind": "user-provided-lead",
+      "locator": "request:official-url-and-owner",
+      "claim": "The requested canonical URL and owner are GitHub glifxyz/glif-mcp-server and glifxyz.",
+      "observed_at": "2026-09-20T00:00:00Z",
+      "confidence": "low"
+    }
+  ],
+  "notes": [
+    "This record is not a source manifest for a snapshot because no snapshot was obtained.",
+    "Do not infer branch, commit, dates, license, implementation language, capabilities, or safety from the repository name."
+  ]
+}
