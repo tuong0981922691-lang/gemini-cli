@@ -1,0 +1,102 @@
+{
+  "$schema": "../knowledge-registry.schema.json",
+  "schema_version": "1.0.0",
+  "knowledge_id": "agent.mcp.cometchat.docs-mcp@unresolved-2026-09-20",
+  "technology_name": "docs-mcp",
+  "technology_domain": ["agent", "mcp", "documentation-retrieval"],
+  "problem_statement": "CHƯA BIẾT: repository content was unavailable for static inspection.",
+  "architecture_role": "GIẢ ĐỊNH: candidate documentation MCP integration; not approved for use.",
+  "source": {
+    "official_url": "https://github.com/cometchat/docs-mcp",
+    "repository_owner": "cometchat",
+    "source_class": "official-repository-candidate",
+    "ownership_verification": "unverified-user-provided",
+    "default_branch": null,
+    "commit_sha": null,
+    "commit_author_date": null,
+    "commit_committer_date": null,
+    "release": null,
+    "accessed_at": "2026-09-20T22:01:53Z",
+    "collection_status": "blocked-network-http-403",
+    "identifiers": [
+      {
+        "value": "io.github.cometchat/docs-mcp",
+        "kind": "unclassified-user-supplied-identifier",
+        "verification": "unverified"
+      }
+    ],
+    "snapshot": {
+      "present": false,
+      "path": null,
+      "history": "unavailable",
+      "content_sha256": null,
+      "read_only": null
+    }
+  },
+  "implementation": {
+    "languages": [],
+    "supported_platforms": [],
+    "hardware_requirements": "unknown",
+    "maintenance_status": "unknown"
+  },
+  "licensing": {
+    "source_code": "unknown",
+    "model_weights": "not-assessed",
+    "training_data": "not-assessed",
+    "plugins": "unknown",
+    "direct_dependencies": "unknown",
+    "transitive_dependencies": "unknown",
+    "attribution_obligations": "unknown",
+    "patent_risk": "not-assessed"
+  },
+  "assurance": {
+    "security_risks": [
+      "Repository identity, content, tools, transports, and permission boundaries are unverified.",
+      "License, dependency, credential handling, telemetry, and maintenance state are unknown."
+    ],
+    "test_evidence": [],
+    "execution_status": "not-executed-policy-compliant",
+    "scores": {
+      "accuracy": null,
+      "verifiability": 0,
+      "completeness": 0,
+      "freshness": null,
+      "applicability": null,
+      "source_reliability": 1
+    },
+    "confidence": "low",
+    "final_label": "CAN_XAC_MINH",
+    "revalidation_date": "2026-10-20"
+  },
+  "evidence": [
+    {
+      "evidence_id": "COMETCHAT-ACCESS-20260920",
+      "kind": "collection-log",
+      "locator": "local-session: git clone --mirror and browser open",
+      "claim": "GitHub acquisition was rejected by the environment (Git transport HTTP 403; browser gateway HTTP 401), so no repository object was acquired.",
+      "observed_at": "2026-09-20T21:00:16Z",
+      "confidence": "high"
+    },
+    {
+      "evidence_id": "COMETCHAT-IDENTITY-LEAD-20260920",
+      "kind": "user-provided-lead",
+      "locator": "request:https://github.com/cometchat/docs-mcp",
+      "claim": "The requested candidate URL is GitHub cometchat/docs-mcp.",
+      "observed_at": "2026-09-20T00:00:00Z",
+      "confidence": "low"
+    },
+    {
+      "evidence_id": "COMETCHAT-IDENTIFIER-LEAD-20260920",
+      "kind": "user-provided-lead",
+      "locator": "request:io.github.cometchat/docs-mcp",
+      "claim": "The user supplied the exact string io.github.cometchat/docs-mcp; its namespace type and relationship to the GitHub candidate are not verified.",
+      "observed_at": "2026-09-20T22:01:53Z",
+      "confidence": "low"
+    }
+  ],
+  "notes": [
+    "This is a failed-acquisition record, not a source manifest or repository snapshot.",
+    "Do not infer canonical ownership, branch, commit, dates, license, capabilities, or safety from the URL or repository name.",
+    "The supplied io.github.cometchat/docs-mcp string may be a package coordinate, reversed-domain identifier, or malformed URL; classification requires authoritative metadata."
+  ]
+}

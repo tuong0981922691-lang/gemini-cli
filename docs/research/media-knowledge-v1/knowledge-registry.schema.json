@@ -1,0 +1,229 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/media-knowledge-registry-v1.json",
+  "title": "Media Knowledge Registry Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "knowledge_id",
+    "technology_name",
+    "technology_domain",
+    "problem_statement",
+    "architecture_role",
+    "source",
+    "implementation",
+    "licensing",
+    "assurance",
+    "evidence"
+  ],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schema_version": { "const": "1.0.0" },
+    "knowledge_id": { "type": "string", "minLength": 1 },
+    "technology_name": { "type": "string", "minLength": 1 },
+    "technology_domain": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "problem_statement": { "type": "string", "minLength": 1 },
+    "architecture_role": { "type": "string", "minLength": 1 },
+    "source": { "$ref": "#/$defs/source" },
+    "implementation": { "$ref": "#/$defs/implementation" },
+    "licensing": { "$ref": "#/$defs/licensing" },
+    "assurance": { "$ref": "#/$defs/assurance" },
+    "evidence": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/evidence" }
+    },
+    "notes": { "type": "array", "items": { "type": "string" } }
+  },
+  "$defs": {
+    "nullableString": { "type": ["string", "null"] },
+    "timestamp": { "type": "string", "format": "date-time" },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "official_url",
+        "repository_owner",
+        "source_class",
+        "ownership_verification",
+        "default_branch",
+        "commit_sha",
+        "commit_author_date",
+        "commit_committer_date",
+        "release",
+        "accessed_at",
+        "collection_status",
+        "snapshot"
+      ],
+      "properties": {
+        "official_url": { "type": "string", "format": "uri" },
+        "repository_owner": { "$ref": "#/$defs/nullableString" },
+        "source_class": { "type": "string" },
+        "ownership_verification": { "type": "string" },
+        "default_branch": { "$ref": "#/$defs/nullableString" },
+        "commit_sha": {
+          "type": ["string", "null"],
+          "pattern": "^[0-9a-f]{40,64}$"
+        },
+        "commit_author_date": {
+          "oneOf": [{ "$ref": "#/$defs/timestamp" }, { "type": "null" }]
+        },
+        "commit_committer_date": {
+          "oneOf": [{ "$ref": "#/$defs/timestamp" }, { "type": "null" }]
+        },
+        "release": { "$ref": "#/$defs/nullableString" },
+        "accessed_at": { "$ref": "#/$defs/timestamp" },
+        "collection_status": { "type": "string" },
+        "identifiers": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["value", "kind", "verification"],
+            "properties": {
+              "value": { "type": "string", "minLength": 1 },
+              "kind": { "type": "string", "minLength": 1 },
+              "verification": {
+                "enum": ["verified", "unverified", "rejected"]
+              }
+            }
+          }
+        },
+        "snapshot": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "present",
+            "path",
+            "history",
+            "content_sha256",
+            "read_only"
+          ],
+          "properties": {
+            "present": { "type": "boolean" },
+            "path": { "$ref": "#/$defs/nullableString" },
+            "history": { "enum": ["full", "metadata-only", "unavailable"] },
+            "content_sha256": {
+              "type": ["string", "null"],
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "read_only": { "type": ["boolean", "null"] }
+          }
+        }
+      }
+    },
+    "implementation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "languages",
+        "supported_platforms",
+        "hardware_requirements",
+        "maintenance_status"
+      ],
+      "properties": {
+        "languages": { "type": "array", "items": { "type": "string" } },
+        "supported_platforms": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "hardware_requirements": { "type": "string" },
+        "maintenance_status": { "type": "string" }
+      }
+    },
+    "licensing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_code",
+        "model_weights",
+        "training_data",
+        "plugins",
+        "direct_dependencies",
+        "transitive_dependencies",
+        "attribution_obligations",
+        "patent_risk"
+      ],
+      "properties": {
+        "source_code": { "type": "string" },
+        "model_weights": { "type": "string" },
+        "training_data": { "type": "string" },
+        "plugins": { "type": "string" },
+        "direct_dependencies": { "type": "string" },
+        "transitive_dependencies": { "type": "string" },
+        "attribution_obligations": { "type": "string" },
+        "patent_risk": { "type": "string" }
+      }
+    },
+    "score": { "type": ["integer", "null"], "minimum": 0, "maximum": 5 },
+    "assurance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "security_risks",
+        "test_evidence",
+        "execution_status",
+        "scores",
+        "confidence",
+        "final_label",
+        "revalidation_date"
+      ],
+      "properties": {
+        "security_risks": { "type": "array", "items": { "type": "string" } },
+        "test_evidence": { "type": "array", "items": { "type": "string" } },
+        "execution_status": { "type": "string" },
+        "scores": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "accuracy",
+            "verifiability",
+            "completeness",
+            "freshness",
+            "applicability",
+            "source_reliability"
+          ],
+          "properties": {
+            "accuracy": { "$ref": "#/$defs/score" },
+            "verifiability": { "$ref": "#/$defs/score" },
+            "completeness": { "$ref": "#/$defs/score" },
+            "freshness": { "$ref": "#/$defs/score" },
+            "applicability": { "$ref": "#/$defs/score" },
+            "source_reliability": { "$ref": "#/$defs/score" }
+          }
+        },
+        "confidence": { "enum": ["low", "medium", "high"] },
+        "final_label": {
+          "enum": ["TINH_HOA", "DAT", "CAN_XAC_MINH", "LOAI_BO"]
+        },
+        "revalidation_date": { "type": "string", "format": "date" }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "evidence_id",
+        "kind",
+        "locator",
+        "claim",
+        "observed_at",
+        "confidence"
+      ],
+      "properties": {
+        "evidence_id": { "type": "string", "minLength": 1 },
+        "kind": { "type": "string", "minLength": 1 },
+        "locator": { "type": "string", "minLength": 1 },
+        "claim": { "type": "string", "minLength": 1 },
+        "observed_at": { "$ref": "#/$defs/timestamp" },
+        "confidence": { "enum": ["low", "medium", "high"] }
+      }
+    }
+  }
+}

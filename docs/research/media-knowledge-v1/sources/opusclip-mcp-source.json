@@ -1,0 +1,104 @@
+{
+  "$schema": "../knowledge-registry.schema.json",
+  "schema_version": "1.0.0",
+  "knowledge_id": "agent.mcp.opus-pro.opusclip-mcp@unresolved-2026-09-20",
+  "technology_name": "opusclip-mcp",
+  "technology_domain": ["agent", "mcp", "video-workflow-candidate"],
+  "problem_statement": "CHƯA BIẾT: repository content was unavailable for static inspection.",
+  "architecture_role": "GIẢ ĐỊNH: candidate MCP integration for a media workflow; not approved for architecture or production use.",
+  "source": {
+    "official_url": "https://github.com/opus-pro/opusclip-mcp",
+    "repository_owner": "opus-pro",
+    "source_class": "official-repository-candidate",
+    "ownership_verification": "unverified-user-provided",
+    "default_branch": null,
+    "commit_sha": null,
+    "commit_author_date": null,
+    "commit_committer_date": null,
+    "release": null,
+    "accessed_at": "2026-09-20T22:15:44Z",
+    "collection_status": "blocked-proxy-http-403-and-direct-dns",
+    "identifiers": [
+      {
+        "value": "https://github.com/opus-pro/opusclip-mcp",
+        "kind": "user-supplied-repository-url",
+        "verification": "unverified"
+      }
+    ],
+    "snapshot": {
+      "present": false,
+      "path": null,
+      "history": "unavailable",
+      "content_sha256": null,
+      "read_only": null
+    }
+  },
+  "implementation": {
+    "languages": [],
+    "supported_platforms": [],
+    "hardware_requirements": "unknown",
+    "maintenance_status": "unknown"
+  },
+  "licensing": {
+    "source_code": "unknown",
+    "model_weights": "not-assessed",
+    "training_data": "not-assessed",
+    "plugins": "unknown",
+    "direct_dependencies": "unknown",
+    "transitive_dependencies": "unknown",
+    "attribution_obligations": "unknown",
+    "patent_risk": "not-assessed"
+  },
+  "assurance": {
+    "security_risks": [
+      "Repository ownership, content, MCP capabilities, transports, authentication, and side effects are unverified.",
+      "Credential handling, uploaded-media handling, retention, telemetry, dependency, license, and maintenance behavior are unknown.",
+      "The repository name must not be used as evidence of association with any product, service, or legal entity."
+    ],
+    "test_evidence": [],
+    "execution_status": "not-executed-policy-compliant",
+    "scores": {
+      "accuracy": null,
+      "verifiability": 0,
+      "completeness": 0,
+      "freshness": null,
+      "applicability": null,
+      "source_reliability": 1
+    },
+    "confidence": "low",
+    "final_label": "CAN_XAC_MINH",
+    "revalidation_date": "2026-10-20"
+  },
+  "evidence": [
+    {
+      "evidence_id": "OPUSCLIP-ACCESS-20260920",
+      "kind": "collection-log",
+      "locator": "local-session: git clone --mirror --no-local and browser open",
+      "claim": "Acquisition was rejected by the environment (Git transport HTTP 403; browser gateway HTTP 401), so no repository object or official metadata was acquired.",
+      "observed_at": "2026-09-20T22:06:54Z",
+      "confidence": "high"
+    },
+    {
+      "evidence_id": "OPUSCLIP-IDENTITY-LEAD-20260920",
+      "kind": "user-provided-lead",
+      "locator": "request:https://github.com/opus-pro/opusclip-mcp",
+      "claim": "The user supplied https://github.com/opus-pro/opusclip-mcp as a candidate repository URL; canonical ownership and repository contents are not independently verified.",
+      "observed_at": "2026-09-20T22:06:54Z",
+      "confidence": "low"
+    },
+    {
+      "evidence_id": "OPUSCLIP-RECHECK-20260920T221544Z",
+      "kind": "collection-log",
+      "locator": "local-session: git ls-remote --symref with configured proxy and with proxy variables removed",
+      "claim": "A repeated metadata-only check failed through the configured proxy with HTTP 403 and failed without the proxy because github.com could not be resolved; no remote ref, branch, commit, or repository content was obtained.",
+      "observed_at": "2026-09-20T22:15:44Z",
+      "confidence": "high"
+    }
+  ],
+  "notes": [
+    "This is a failed-acquisition record, not a source manifest or repository snapshot.",
+    "Do not infer branch, commit, dates, license, language, dependencies, capabilities, product affiliation, maintenance, privacy behavior, security, or production suitability from the URL or repository name.",
+    "Static inspection of README, LICENSE, SECURITY, changelog, manifests, lockfiles, workflows, and MCP declarations is required before any sandbox proposal.",
+    "Repeated submissions of the same candidate URL are consolidated into this record and its append-only evidence history rather than creating duplicate Knowledge Records."
+  ]
+}
