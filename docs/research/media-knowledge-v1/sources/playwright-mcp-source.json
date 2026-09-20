@@ -1,0 +1,114 @@
+{
+  "$schema": "../knowledge-registry.schema.json",
+  "schema_version": "1.0.0",
+  "knowledge_id": "agent.mcp.microsoft.playwright-mcp@unresolved-2026-09-20",
+  "technology_name": "playwright-mcp",
+  "technology_domain": ["agent", "mcp", "browser-automation-candidate"],
+  "problem_statement": "CHƯA BIẾT: no authoritative repository or package metadata was available for static inspection.",
+  "architecture_role": "GIẢ ĐỊNH: candidate browser-automation MCP integration; not approved for architecture or production use.",
+  "source": {
+    "official_url": "https://github.com/microsoft/playwright-mcp",
+    "repository_owner": "microsoft",
+    "source_class": "inferred-official-repository-candidate",
+    "ownership_verification": "unverified-inference-from-user-identifier",
+    "default_branch": null,
+    "commit_sha": null,
+    "commit_author_date": null,
+    "commit_committer_date": null,
+    "release": null,
+    "accessed_at": "2026-09-20T22:22:13Z",
+    "collection_status": "blocked-network-http-403-and-browser-http-401",
+    "identifiers": [
+      {
+        "value": "io.github.microsoft/playwright-mcp",
+        "kind": "unclassified-user-supplied-identifier",
+        "verification": "unverified"
+      },
+      {
+        "value": "https://github.com/microsoft/playwright-mcp",
+        "kind": "inferred-repository-url-candidate",
+        "verification": "unverified"
+      },
+      {
+        "value": "https://microsoft.github.io/playwright-mcp/",
+        "kind": "inferred-github-pages-url-candidate",
+        "verification": "unverified"
+      }
+    ],
+    "snapshot": {
+      "present": false,
+      "path": null,
+      "history": "unavailable",
+      "content_sha256": null,
+      "read_only": null
+    }
+  },
+  "implementation": {
+    "languages": [],
+    "supported_platforms": [],
+    "hardware_requirements": "unknown",
+    "maintenance_status": "unknown"
+  },
+  "licensing": {
+    "source_code": "unknown",
+    "model_weights": "not-assessed",
+    "training_data": "not-assessed",
+    "plugins": "unknown",
+    "direct_dependencies": "unknown",
+    "transitive_dependencies": "unknown",
+    "attribution_obligations": "unknown",
+    "patent_risk": "not-assessed"
+  },
+  "assurance": {
+    "security_risks": [
+      "Canonical identity, repository content, MCP declarations, tools, resources, prompts, transports, and side effects are unverified.",
+      "A browser-automation integration could expose page content, credentials, cookies, downloads, network access, or filesystem state; actual capabilities and controls are unknown.",
+      "The microsoft owner string and Playwright name must not be treated as proof of Microsoft ownership, affiliation, maintenance, license, or security without authoritative metadata."
+    ],
+    "test_evidence": [],
+    "execution_status": "not-executed-policy-compliant",
+    "scores": {
+      "accuracy": null,
+      "verifiability": 0,
+      "completeness": 0,
+      "freshness": null,
+      "applicability": null,
+      "source_reliability": 1
+    },
+    "confidence": "low",
+    "final_label": "CAN_XAC_MINH",
+    "revalidation_date": "2026-10-20"
+  },
+  "evidence": [
+    {
+      "evidence_id": "PLAYWRIGHT-MCP-IDENTIFIER-LEAD-20260920",
+      "kind": "user-provided-lead",
+      "locator": "request:io.github.microsoft/playwright-mcp",
+      "claim": "The user supplied the exact string io.github.microsoft/playwright-mcp; its identifier class, ownership, and relationship to any GitHub repository or package are unverified.",
+      "observed_at": "2026-09-20T22:22:13Z",
+      "confidence": "low"
+    },
+    {
+      "evidence_id": "PLAYWRIGHT-MCP-NORMALIZATION-HYPOTHESIS-20260920",
+      "kind": "analyst-inference",
+      "locator": "normalization-candidates: github.com/microsoft/playwright-mcp and microsoft.github.io/playwright-mcp",
+      "claim": "The GitHub repository and GitHub Pages URLs are normalization hypotheses derived from the supplied string, not verified canonical sources.",
+      "observed_at": "2026-09-20T22:22:13Z",
+      "confidence": "low"
+    },
+    {
+      "evidence_id": "PLAYWRIGHT-MCP-ACCESS-20260920",
+      "kind": "collection-log",
+      "locator": "local-session: git ls-remote for literal and normalized candidates; browser open for GitHub candidate",
+      "claim": "All Git transport attempts were rejected by the configured proxy with HTTP 403 and browser access returned HTTP 401; no ref, commit, repository object, or official metadata was acquired.",
+      "observed_at": "2026-09-20T22:22:13Z",
+      "confidence": "high"
+    }
+  ],
+  "notes": [
+    "This is a failed-acquisition and identifier-normalization record, not a source manifest or repository snapshot.",
+    "Do not infer branch, commit, dates, license, implementation language, dependency, browser capability, product affiliation, maintenance, privacy behavior, security, or production suitability from the identifier or inferred URLs.",
+    "Static inspection of canonical README, LICENSE, SECURITY, changelog, manifests, lockfiles, workflows, and MCP declarations is required before any sandbox proposal.",
+    "Any later authoritative source that rejects the normalization hypothesis must preserve this record and mark the inferred identifiers rejected rather than rewriting evidence history."
+  ]
+}

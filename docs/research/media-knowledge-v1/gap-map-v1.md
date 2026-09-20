@@ -14,13 +14,13 @@ không phải bằng chứng rằng báo cáo không tồn tại.
 
 ## 2. Sổ trạng thái ban đầu
 
-| Nhóm                 | Trạng thái                                                                                 | Căn cứ hiện có                                           | Hành động tiếp theo                                                |
-| -------------------- | ------------------------------------------------------------------------------------------ | -------------------------------------------------------- | ------------------------------------------------------------------ |
-| Nội dung đã xác minh | Trống                                                                                      | Chưa có đoạn nguồn có phiên bản                          | Thu thập nguồn chính thức ở Giai đoạn 2                            |
-| Vùng cách ly         | Các MCP candidate GLIF, CometChat và OpusClip; mọi khẳng định chưa đối chiếu trong báo cáo | URL/owner do người dùng cung cấp; truy cập mạng thất bại | Cấp snapshot hoặc mở truy cập chỉ đọc, sau đó băm và kiểm tra tĩnh |
-| Nội dung bị loại bỏ  | Trống                                                                                      | Chưa đủ bằng chứng để loại bỏ                            | Chỉ ghi `LOAI_BO` kèm lý do và bằng chứng                          |
-| Khoảng trống         | Báo cáo DOCX; metadata GLIF; toàn bộ ma trận miền                                          | Artifact/nguồn chưa khả dụng                             | Thu thập theo kế hoạch khảo sát                                    |
-| Cần tái kiểm định    | Chưa xác định                                                                              | Chưa có baseline phiên bản                               | Đặt ngày tái kiểm định theo độ biến động                           |
+| Nhóm                 | Trạng thái                                                                                             | Căn cứ hiện có                                                | Hành động tiếp theo                                                |
+| -------------------- | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------- | ------------------------------------------------------------------ |
+| Nội dung đã xác minh | Trống                                                                                                  | Chưa có đoạn nguồn có phiên bản                               | Thu thập nguồn chính thức ở Giai đoạn 2                            |
+| Vùng cách ly         | Các MCP candidate GLIF, CometChat, OpusClip và Playwright; mọi khẳng định chưa đối chiếu trong báo cáo | URL/identifier do người dùng cung cấp; truy cập mạng thất bại | Cấp snapshot hoặc mở truy cập chỉ đọc, sau đó băm và kiểm tra tĩnh |
+| Nội dung bị loại bỏ  | Trống                                                                                                  | Chưa đủ bằng chứng để loại bỏ                                 | Chỉ ghi `LOAI_BO` kèm lý do và bằng chứng                          |
+| Khoảng trống         | Báo cáo DOCX; metadata GLIF; toàn bộ ma trận miền                                                      | Artifact/nguồn chưa khả dụng                                  | Thu thập theo kế hoạch khảo sát                                    |
+| Cần tái kiểm định    | Chưa xác định                                                                                          | Chưa có baseline phiên bản                                    | Đặt ngày tái kiểm định theo độ biến động                           |
 
 ## 3. Bản đồ khoảng trống theo miền
 

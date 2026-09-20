@@ -13,6 +13,7 @@ code and does not claim that an unavailable source has been verified.
 - [GLIF acquisition record](sources/glif-mcp-server-source.json)
 - [CometChat docs-mcp acquisition record](sources/cometchat-docs-mcp-source.json)
 - [OpusClip MCP acquisition record](sources/opusclip-mcp-source.json)
+- [Playwright MCP acquisition record](sources/playwright-mcp-source.json)
 - [Script Intelligence Mine v2 research package](script-intelligence-v2/README.md)
 - [Audio–Visual–3D Technology Mine](audio-visual-3d-v1/README.md)
 - [Video Knowledge Foundry](video-knowledge-foundry-v1/README.md)
